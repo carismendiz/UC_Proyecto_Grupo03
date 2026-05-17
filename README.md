@@ -1,3 +1,8 @@
-# UC_Proyecto
+# PRODUCTO ACADEMICO COLABORATIVO
 Creación de dashboard para PAC de Maestría UC
-Objetivos
+
+**1.- Objetivos
+
+**2. Paquetes Utilizados
+   
+4. 
