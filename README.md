@@ -131,7 +131,13 @@ Análisis: Cuantifica el nivel de asociación lineal entre el PIB, la población
 Análisis: Ejecuta un modelo econométrico de regresión lineal. El coeficiente B1 calculado en el cuadro superior representa la elasticidad. Es decir, indica en qué porcentaje se incrementa la esperanza de vida en América por cada 1% que aumenta el PIB per cápita.
 Por su parte el R2 (Bondad de Ajuste) indica qué porcentaje de la variabilidad total de la esperanza de vida en el continente es explicada únicamente por el nivel de PIB per cápita.
 
-**5.- Conclusiones**
+**5.- Limitaciones**
+
++ La limitación más evidente radica en la temporalidad de la base de datos gapminder, cuya serie histórica para este ejercicio finaliza en el año
+  2007 y se recopila en intervalos de 5 años. 
+
+
+**6.- Conclusiones**
 
 + El dashboard transforma los datos históricos de Gapminder en un entorno analítico interactivo. Realiza animaciones temporales, mapas y un modelo
   econométrico, permite identificar brechas subregionales y expresar la relación directa entre el crecimiento económico y la salud en América.
