@@ -1,8 +1,9 @@
-**DASHBOARD GAPMINDER-AMÉRICA - GRUPO 03**
+
+<h2 align="center">DASHBOARD GAPMINDER-AMÉRICA - GRUPO 03</h1>
 
 El dashboard elaborado es una aplicación interactiva desarrollada bajo los paquetes de R: Shiny y la interfaz estandarizada de shinydashboard. Su propósito fundamental es guiar al usuario desde una vista animada de los datos, para conocer la evolución de los datos, hasta presentar resultados econométricos relacionados a la relación entre la Esperanza de Vida y el Crecimiento Económico. 
 
-<h3 align="center">Figura 01</h1>
+<h3 align="center">Figura 01 Vista General de Dashboard</h1>
 
 <img width="1343" height="661" alt="1" src="https://github.com/user-attachments/assets/4fa4379d-7b93-4c1c-82e2-b5cf94bfe6d1" />
 
@@ -49,20 +50,55 @@ Análisis: Permite observar la trayectoria de los países a lo largo de los año
 
  <h3 align="center"> Figura 03 Top Países por PIB per Cápita (USD)</h1>
 
+<p align="center">
 <img width="518" height="531" alt="3" src="https://github.com/user-attachments/assets/4fe457f8-8863-4c16-8c00-0dfd4d7e6024" />
-
+</p>
 Análisis: Identifica los paíse líderes del continente para el año seleccionado. La segmentación por colores ayuda a notar si una subregión específica (por ejemplo, América del Norte) domina los primeros puestos frente a otras regiones.
 
 <h3 align="center"> Figura 04 Dispersión entre PIBpc vs. Salud (Análisis de Cuadrantes)</h1>
 
+<p align="center">
 <img width="519" height="534" alt="4" src="https://github.com/user-attachments/assets/8f856d49-e07c-4c0e-bf5b-343fc7878d67" />
+</p>
 
 Análisis: Divide a los países en 4 cuadrantes definidos por el promedio de los datos filtrados:
 
-- Alto PIBpc / Alta EV (Verde): Países eficientes y desarrollados.
-- Bajo PIBpc / Alta EV (Azul): Países con alta eficiencia social (logran buena salud con presupuestos ajustados).
-- Alto PIBpc / Baja EV (Naranja): Alertas de desigualdad económica (riqueza mal distribuida que no impacta en salud).
-- Bajo PIBpc / Bajo EV (Rojo): Zonas críticas con urgencia de intervención en políticas públicas.
+- Alto PIBpc / Alta EV (Verde):   Países eficientes y desarrollados.
+- Bajo PIBpc / Alta EV (Azul):    Países con alta eficiencia social (logran buena salud con presupuestos ajustados).
+- Alto PIBpc / Baja EV (Naranja): Desigualdad económica (riqueza mal distribuida que no impacta en salud).
+- Bajo PIBpc / Bajo EV (Rojo):    Zonas con urgencia de intervención en políticas públicas.
+
+<h3 align="center"> Figura 05 Distribución de la Esperanza de Vida (Boxplot)</h1>
+
+<img width="1056" height="481" alt="5" src="https://github.com/user-attachments/assets/36145075-5dab-43db-b910-e3fcdf189f7b" />
+
+Análisis: Muestra la variabilidad y dispersión interna de la esperanza de vida dentro de cada subregión. Permite identificar la asimetría, la mediana real de cada zona y detectar outliers (países que están extremadamente rezagados o adelantados en comparación con sus vecinos geográficos).
+
++ **Pestaña 3: Mapa e Histórico**
+
+<h3 align="center"> Figura 06 Distribución Geográfica de la Esperanza de Vida</h1>
+
+<img width="1050" height="584" alt="6" src="https://github.com/user-attachments/assets/ed7d8e56-1222-493d-8ab7-ec9b66436045" />
+
+Análisis: Permite identificar patrones geoespaciales inmediatos (por ejemplo, norte-sur o brechas críticas en la zona de El Caribe).
+
+<h3 align="center"> Figura 07 Evolución Histórica del PIB per Cápita Promedio (USD)</h1>
+
+<img width="1052" height="482" alt="7" src="https://github.com/user-attachments/assets/e7d3c10c-4f70-4a9b-8621-bb4172c7ec08" />
+
+Análisis: Si se filtra un país, muestra su trayectoria individual de crecimiento o crisis económica. Si se seleccionan "Todos", muestra la evolución de las subregiones, permitiendo identificar momentos históricos de estancamiento, caídas o periodos de bonanza regional.
+
++ **Pestaña 4: Estadísticas Descriptivas**
+  
+<h3 align="center"> Tablas de resumen estadísticos por subregión y país</h1>
+
+<img width="1056" height="572" alt="8" src="https://github.com/user-attachments/assets/851e4322-1af3-4c51-8b52-5b9c842953c9" />
+
+<img width="1057" height="625" alt="9" src="https://github.com/user-attachments/assets/228556c4-b549-4eb6-98f1-ecdfa0b8594d" />
+
+Análisis: Calcula automáticamente la tendencia central (Promedio, Mediana), la dispersión por cuartiles y el Coeficiente de Variación (%). Este último indicador permite entender qué tan homogéneos o heterogéneos son los datos internamente en cada subregión o país a lo largo de toda su historia.
+
+
 
 
 
