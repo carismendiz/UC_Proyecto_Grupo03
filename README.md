@@ -1,6 +1,22 @@
 
 <h2 align="center">DASHBOARD GAPMINDER-AMÉRICA - GRUPO 03</h1>
 
+Curso : Herramientas Informáticas I
+
+Prof. : Joel Turco Quinto
+
+Tema  : Dashboard Gapminder - América (PIBpc)
+
+Integrantes : 
+
+-Cesar Paul Arismendiz Gabino
+
+-Romina Raquel Gavancho Valderrama
+
+-Yomira Esther Quispe Castillón
+
+**INTRODUCCIÓN**
+
 El dashboard elaborado es una aplicación interactiva desarrollada bajo los paquetes de R: Shiny y la interfaz estandarizada de shinydashboard. Su propósito fundamental es guiar al usuario desde una vista animada de los datos, para conocer la evolución de los datos, hasta presentar resultados econométricos relacionados a la relación entre la Esperanza de Vida y el Crecimiento Económico. 
 
 <h3 align="center">Figura 01 Vista General de Dashboard</h1>
@@ -97,6 +113,34 @@ Análisis: Si se filtra un país, muestra su trayectoria individual de crecimien
 <img width="1057" height="625" alt="9" src="https://github.com/user-attachments/assets/228556c4-b549-4eb6-98f1-ecdfa0b8594d" />
 
 Análisis: Calcula automáticamente la tendencia central (Promedio, Mediana), la dispersión por cuartiles y el Coeficiente de Variación (%). Este último indicador permite entender qué tan homogéneos o heterogéneos son los datos internamente en cada subregión o país a lo largo de toda su historia.
+
+<h3 align="center"> Figura 08 Correlaciones de Pearson</h1>
+
+<img width="1052" height="561" alt="10" src="https://github.com/user-attachments/assets/18087e55-2284-4337-b6e8-0e65d675d25b" />
+
+Análisis: Cuantifica el nivel de asociación lineal entre el PIB, la población y la esperanza de vida a través de coeficientes numéricos que oscilan entre -1 y 1. Permite validar de forma estadística la relación entre las variables indicadas.
+
++ **Pestaña 5: Modelo de Regresión Log-Log**
+
+<h3 align="center"> Modelo de Regresión Log-Log</h1>
+
+<img width="1050" height="242" alt="11" src="https://github.com/user-attachments/assets/75aca2f9-5842-4228-b2ed-2064a3a12445" />
+
+<img width="1055" height="615" alt="12" src="https://github.com/user-attachments/assets/43f6c17b-d0e8-4962-934d-486a23d749d7" />
+
+Análisis: Ejecuta un modelo econométrico de regresión lineal. El coeficiente B1 calculado en el cuadro superior representa la elasticidad. Es decir, indica en qué porcentaje se incrementa la esperanza de vida en América por cada 1% que aumenta el PIB per cápita.
+Por su parte el R2 (Bondad de Ajuste) indica qué porcentaje de la variabilidad total de la esperanza de vida en el continente es explicada únicamente por el nivel de PIB per cápita.
+
+**5.- Conclusiones**
+
++ El dashboard transforma los datos históricos de Gapminder en un entorno analítico interactivo. Realiza animaciones temporales, mapas y un modelo
+  econométrico, permite identificar brechas subregionales y expresar la relación directa entre el crecimiento económico y la salud en América.
+
+
+
+
+
+
 
 
 
