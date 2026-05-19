@@ -33,6 +33,42 @@ Visualizar y modelar de forma interactiva la relación histórica entre el creci
 | **PIBpc** | Numérico (`numeric`) | Producto Interno Bruto per Cápita medido en dólares (USD). | Renombrado desde `gdpPercap`. |
 | **Subregion** | Carácter (`character`) | Clasificación geográfica interna creada (*América del Norte, Centroamérica, América del Sur, El Caribe*). | Generada en R mediante condicionales `case_when`. |
 
+**4.- Descripción y Análisis de las Pestañas y sus Gráficos**
+
++ **Pestaña 1: Desarrollo y Salud**
+
+   <h3 align="center">Figura 02 Evolución del PIB per Cápita vs. Esperanza de Vida (Animación)</h1>
+
+<img width="1051" height="574" alt="2" src="https://github.com/user-attachments/assets/8c3c710e-cde3-4e49-8b59-36f5c01290ae" />
+
+Tipo: Gráfico de dispersión (Scatter Plot) animado en el tiempo con escala logarítmica en el eje X y tamaño de burbuja proporcional a la población.
+
+Análisis: Permite observar la trayectoria de los países a lo largo de los años. Al usar una escala logarítmica en el PIB, evita que países con ingresos extremadamente altos (como EE. UU. o Canadá) distorsionen visualmente al resto. La animación ayuda a verificar si la hipótesis de que "a mayor riqueza, mayor esperanza de vida" se cumple de forma constante a través del tiempo.
+
++ **Pestaña 2: Ranking y Competitividad**
+
+ <h3 align="center"> Figura 03 Top Países por PIB per Cápita (USD)</h1>
+
+<img width="518" height="531" alt="3" src="https://github.com/user-attachments/assets/4fe457f8-8863-4c16-8c00-0dfd4d7e6024" />
+
+Análisis: Identifica los paíse líderes del continente para el año seleccionado. La segmentación por colores ayuda a notar si una subregión específica (por ejemplo, América del Norte) domina los primeros puestos frente a otras regiones.
+
+<h3 align="center"> Figura 04 Dispersión entre PIBpc vs. Salud (Análisis de Cuadrantes)</h1>
+
+<img width="519" height="534" alt="4" src="https://github.com/user-attachments/assets/8f856d49-e07c-4c0e-bf5b-343fc7878d67" />
+
+Análisis: Divide a los países en 4 cuadrantes definidos por el promedio de los datos filtrados:
+
+- Alto PIBpc / Alta EV (Verde): Países eficientes y desarrollados.
+- Bajo PIBpc / Alta EV (Azul): Países con alta eficiencia social (logran buena salud con presupuestos ajustados).
+- Alto PIBpc / Baja EV (Naranja): Alertas de desigualdad económica (riqueza mal distribuida que no impacta en salud).
+- Bajo PIBpc / Bajo EV (Rojo): Zonas críticas con urgencia de intervención en políticas públicas.
+
+
+
+
+
+
 
 
 
