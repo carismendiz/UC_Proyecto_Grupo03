@@ -1,12 +1,6 @@
 
 ---
-Titulo: "Dashboard Gapminder - América"
-
-Grupo 03:
-Cesar Paul Arismendiz Gabino
-Romina Raquel Gavancho Valderrama
-Yomira Esther Quispe Castillón
-
+Titulo: "Dashboard Gapminder - América - Grupo 03"
 date: "`r Sys.Date()`"
 output: html_document
 ---
