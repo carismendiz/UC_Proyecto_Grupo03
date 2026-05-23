@@ -142,6 +142,9 @@ Por su parte el R2 (Bondad de Ajuste) indica qué porcentaje de la variabilidad 
 
 + El dashboard transforma los datos históricos de Gapminder en un entorno analítico interactivo. Realiza animaciones temporales, mapas y un modelo
   econométrico, permite identificar brechas subregionales y expresar la relación directa entre el crecimiento económico y la salud en América.
++ Existe una relación positiva entre el PIB per cápita y la esperanza de vida.
++ América del Norte presenta los mayores niveles de desarrollo económico.
++ Las subregiones muestran comportamientos heterogéneos en crecimiento y salud.
 
 
 
