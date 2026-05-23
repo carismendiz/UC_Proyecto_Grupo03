@@ -21,7 +21,8 @@ El dashboard elaborado es una aplicación interactiva desarrollada bajo los paqu
 
 <h3 align="center">Figura 01 Vista General de Dashboard</h1>
 
-<img width="1343" height="661" alt="1" src="https://github.com/user-attachments/assets/4fa4379d-7b93-4c1c-82e2-b5cf94bfe6d1" />
+<img width="1347" height="662" alt="1 1" src="https://github.com/user-attachments/assets/b6de101d-757f-4400-b8e3-ae8cf541dba8" />
+
 
 **1.- Objetivo General**
 
@@ -56,7 +57,7 @@ Visualizar y modelar de forma interactiva la relación histórica entre el creci
 
    <h3 align="center">Figura 02 Evolución del PIB per Cápita vs. Esperanza de Vida (Animación)</h1>
 
-<img width="1051" height="574" alt="2" src="https://github.com/user-attachments/assets/8c3c710e-cde3-4e49-8b59-36f5c01290ae" />
+<img width="1044" height="578" alt="2 1" src="https://github.com/user-attachments/assets/2e448156-e024-4cd3-9ccb-d5287aa57364" />
 
 Tipo: Gráfico de dispersión (Scatter Plot) animado en el tiempo con escala logarítmica en el eje X y tamaño de burbuja proporcional a la población.
 
@@ -86,7 +87,7 @@ Análisis: Divide a los países en 4 cuadrantes definidos por el promedio de los
 
 <h3 align="center"> Figura 05 Distribución de la Esperanza de Vida (Boxplot)</h1>
 
-<img width="1056" height="481" alt="5" src="https://github.com/user-attachments/assets/36145075-5dab-43db-b910-e3fcdf189f7b" />
+<img width="1054" height="474" alt="5 1" src="https://github.com/user-attachments/assets/d97be808-cf4c-449f-9252-7d92f0271380" />
 
 Análisis: Muestra la variabilidad y dispersión interna de la esperanza de vida dentro de cada subregión. Permite identificar la asimetría, la mediana real de cada zona y detectar outliers (países que están extremadamente rezagados o adelantados en comparación con sus vecinos geográficos).
 
@@ -124,9 +125,9 @@ Análisis: Cuantifica el nivel de asociación lineal entre el PIB, la población
 
 <h3 align="center"> Modelo de Regresión Log-Log</h1>
 
-<img width="1050" height="242" alt="11" src="https://github.com/user-attachments/assets/75aca2f9-5842-4228-b2ed-2064a3a12445" />
+<img width="1053" height="244" alt="z1" src="https://github.com/user-attachments/assets/d724aca2-1dde-4268-86ae-787aef72b1ae" />
 
-<img width="1055" height="615" alt="12" src="https://github.com/user-attachments/assets/43f6c17b-d0e8-4962-934d-486a23d749d7" />
+<img width="1050" height="603" alt="z2" src="https://github.com/user-attachments/assets/233ffa7b-16db-4089-8a9f-533a44e44228" />
 
 Análisis: Ejecuta un modelo econométrico de regresión lineal. El coeficiente B1 calculado en el cuadro superior representa la elasticidad. Es decir, indica en qué porcentaje se incrementa la esperanza de vida en América por cada 1% que aumenta el PIB per cápita.
 Por su parte el R2 (Bondad de Ajuste) indica qué porcentaje de la variabilidad total de la esperanza de vida en el continente es explicada únicamente por el nivel de PIB per cápita.
