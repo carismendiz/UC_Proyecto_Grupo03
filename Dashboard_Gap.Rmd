@@ -444,4 +444,4 @@ shinyApp(ui, server)
 
 # Aplicación Shiny
 
-El proyecto también cuenta con una aplicación interactiva desarrollada en Shiny para explorar dinámicamente los indicadores económicos y sociales.
+El proyecto también cuenta con una aplicación interactiva desarrollada en Shiny para explorar dinámicamente los indicadores económicos y sociales.Link: https://carismendiz.shinyapps.io/dashboard/
