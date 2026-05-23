@@ -1,0 +1,145 @@
+
+---
+Titulo: "Dashboard Gapminder - América"
+
+Grupo 03:
+Cesar Paul Arismendiz Gabino
+Romina Raquel Gavancho Valderrama
+Yomira Esther Quispe Castillón
+
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introducción
+
+El dashboard elaborado es una aplicación interactiva desarrollada bajo los paquetes de R: Shiny y la interfaz estandarizada de shinydashboard. Su propósito fundamental es guiar al usuario desde una vista animada de los datos, para conocer la evolución de los datos, hasta presentar resultados econométricos relacionados a la relación entre la Esperanza de Vida y el Crecimiento Económico.
+
+# Librerías
+
+```{r setup, message=FALSE, warning=FALSE}
+library(shiny)
+library(shinydashboard)
+library(ggplot2)
+library(gapminder)
+library(dplyr)
+library(plotly)
+library(DT)
+library(maps)
+library(viridis)
+library(stringr)
+```
+
+# Preparación de Datos
+
+```{r}
+DATA_PAC <- gapminder::gapminder %>%
+  filter(continent == "Americas", year >= 1970) %>%
+  mutate(
+    country = as.character(country),
+    continent = as.character(continent)
+  ) %>% 
+  rename(
+    País = country,
+    Continente = continent,
+    Año = year,
+    Esperanza_de_vida = lifeExp,
+    Población = pop,
+    PIBpc = gdpPercap
+  ) %>%
+  mutate(
+    Continente = "América",
+    Subregion = case_when(
+      País %in% c("United States", "Canada") ~ "América del Norte",
+      País %in% c("Mexico", "Guatemala", "Honduras", "Nicaragua",
+                  "El Salvador", "Costa Rica", "Panama") ~ "Centroamérica",
+      País %in% c("Brazil", "Argentina", "Chile", "Uruguay",
+                  "Paraguay", "Bolivia", "Peru", "Colombia",
+                  "Venezuela", "Ecuador") ~ "América del Sur",
+      País %in% c("Cuba", "Dominican Republic", "Haiti",
+                  "Jamaica", "Trinidad and Tobago","Puerto Rico") ~ "El Caribe",
+      TRUE ~ "Otros"
+    )
+  )
+```
+
+# Vista de los Datos
+
+```{r}
+head(DATA_PAC)
+```
+
+# Estadísticas Descriptivas
+
+```{r}
+summary(DATA_PAC)
+```
+
+# Gráfico: PIB per Cápita vs Esperanza de Vida
+
+```{r}
+ggplot(DATA_PAC,
+       aes(x = PIBpc,
+           y = Esperanza_de_vida,
+           color = Subregion)) +
+  geom_point(alpha = 0.7) +
+  scale_x_log10() +
+  theme_minimal() +
+  labs(
+    title = "PIB per Cápita vs Esperanza de Vida",
+    x = "PIB per Cápita",
+    y = "Esperanza de Vida"
+  )
+```
+
+# Evolución Histórica del PIB per Cápita
+
+```{r}
+DATA_PAC %>%
+  group_by(Año, Subregion) %>%
+  summarise(PIBpc_prom = mean(PIBpc),
+            .groups = "drop") %>%
+  ggplot(aes(x = Año,
+             y = PIBpc_prom,
+             color = Subregion)) +
+  geom_line(size = 1.2) +
+  theme_minimal() +
+  labs(
+    title = "Evolución del PIB per Cápita",
+    y = "PIB per Cápita Promedio"
+  )
+```
+
+# Modelo de Regresión
+
+```{r}
+modelo <- lm(log(Esperanza_de_vida) ~ log(PIBpc),
+             data = DATA_PAC)
+
+summary(modelo)
+```
+
+# Visualización del Modelo
+
+```{r}
+ggplot(DATA_PAC,
+       aes(x = PIBpc,
+           y = Esperanza_de_vida)) +
+  geom_point(alpha = 0.6) +
+  stat_smooth(method = "lm",
+              color = "red") +
+  scale_x_log10() +
+  scale_y_log10() +
+  theme_minimal()
+```
+
+# Conclusiones
+
+- Existe una relación positiva entre el PIB per cápita y la esperanza de vida.
+- América del Norte presenta los mayores niveles de desarrollo económico.
+- Las subregiones muestran comportamientos heterogéneos en crecimiento y salud.
+- El dashboard transforma los datos históricos de Gapminder en un entorno analítico interactivo. Realiza animaciones temporales, mapas y un modelo econométrico, permite identificar brechas subregionales y expresar la relación directa entre el crecimiento económico y la salud en América.
+
+# Aplicación Shiny
+
+El proyecto también cuenta con una aplicación interactiva desarrollada en Shiny para explorar dinámicamente los indicadores económicos y sociales.
